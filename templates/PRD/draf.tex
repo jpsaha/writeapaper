@@ -1,0 +1,35 @@
+\documentclass[paper=6.125in:9.25in,twoside,openright,pagesize=pdftex,10pt]{scrbook}
+
+\input{../templates/PRD/preamble.sty}
+
+\renewenvironment{exampleRMO}{\begin{example}}{\end{example}}
+
+%\renewcommand\asydir{asyfiles}
+\title{Combinatorics}
+\date{\today}
+\begin{document}
+%\maketitle %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+%Combinatorics %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+%\tableofcontents
+
+\chapter{Warm up}
+
+This is new to see. 
+
+\backmatter
+% \part{Backmatter}
+\renewcommand{\listtheoremname}{List of problems and examples}
+\renewcommand\indexname{Index of named problems}
+
+%\listoftheorems[ignoreall,show={problem,example,exampleRMO,exampleINMO,question}]
+\printindex
+\printbibliography
+
+%\include{src/acknow}
+
+\end{document}
