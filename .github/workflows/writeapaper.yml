@@ -12,6 +12,8 @@ jobs:
       # Edit here with the names of your latex file and directory (can use ".")
       DIR: draft
       FILE: draft
+      DIR: draft
+      FILE: draf
       
       
     steps:
