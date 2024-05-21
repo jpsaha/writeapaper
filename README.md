@@ -4,7 +4,7 @@ This is a template repository to write scientific papers with latex and git.
 
 A github action will compile the paper at every commit. The latest version is made available at this permanent URL
 
-> [github.com/dgerosa/writeapaper/blob/build/draft.pdf](https://github.com/dgerosa/writeapaper/blob/build/draft.pdf)
+> [github.com/jpsaha/writeapaper/blob/build/draft.pdf](https://github.com/jpsaha/writeapaper/blob/build/draft.pdf)
 
 
 #### Instructions: 
