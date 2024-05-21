@@ -1,71 +1,36 @@
-\documentclass[floats,floatfix,showpacs,amssymb,prd,twocolumn,superscriptaddress,nofootinbib,nolongbibliography,reprint]{revtex4-2}
 
-\usepackage{amssymb,amsmath,verbatim,mathtools,needspace,enumitem,etoolbox,graphicx,physics,microtype,afterpage,bigints,gensymb,tabularx}
+% !BIB program = biber
+%https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations
+\documentclass[paper=6.125in:9.25in,twoside,openright,pagesize=pdftex,10pt]{scrbook}
 
-\usepackage[dvipsnames, usenames]{xcolor}
-\definecolor{linkcolor}{rgb}{0.0,0.3,0.5}
-\definecolor{dodgerblue}{HTML}{1E90FF}
-\usepackage[unicode, colorlinks=true, linkcolor=linkcolor, citecolor=linkcolor, filecolor=linkcolor,urlcolor=linkcolor, pdfusetitle]{hyperref}
-\usepackage[all]{hypcap}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{orcidlink}
+% \input{preamble.sty}
 
-\interfootnotelinepenalty=10000
-\newcommand{\ssim}{\mathchar"5218\relax\,}
-\newcommand{\ttimes}{\!\times\!\relax}
+\renewenvironment{exampleRMO}{\begin{example}}{\end{example}}
 
-\renewcommand{\vec}[1]{\mathbf{#1}}
-
-\makeatletter
-\newcommand*{\balancecolsandclearpage}{\close@column@grid \cleardoublepage \twocolumngrid}
-\makeatother
-
-%\usepackage{draftwatermark}\SetWatermarkText{Draft} \SetWatermarkScale{4} \SetWatermarkAngle{30}
-
-\newcommand{\milan}{\affiliation{Dipartimento di Fisica ``G. Occhialini'', Universit\'a degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}}
-\newcommand{\infn}{\affiliation{INFN, Sezione di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}}
-
-\newcommand{\dg}[1]{{\color{RedOrange}DG: #1}}
-
-
-\begin{document}
-
-\title{Write a paper now to see what happens after editing workflow.}
-
-\author{Davide Gerosa$\,$\orcidlink{0000-0002-0933-3579}}
-\email{davide.gerosa@unimib.it}
-
-\milan \infn
-
-
-\author{friends}
-
-\pacs{}
-
+%\renewcommand\asydir{asyfiles}
+\title{Combinatorics}
 \date{\today}
+\begin{document}
+%\maketitle %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
 
-\begin{abstract}
+%Combinatorics %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-I'm an abstract.
+\mainmatter
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+%\tableofcontents
 
-\end{abstract}
+To see the changes. 
 
-\maketitle
+\backmatter
+% \part{Backmatter}
+\renewcommand{\listtheoremname}{List of problems and examples}
+\renewcommand\indexname{Index of named problems}
 
-Then what? J
+%\listoftheorems[ignoreall,show={problem,example,exampleRMO,exampleINMO,question}]
+\printindex
+\printbibliography
 
-\section{Introduction}
-
-I'm a section \cite{2016PhRvL.116f1102A}.
-
-
-\acknowledgements
-
-We thank people and grants.
-
-\bibliography{draft}
-
-
+%\include{src/acknow}
 
 \end{document}
