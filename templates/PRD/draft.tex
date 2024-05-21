@@ -21,6 +21,17 @@
 \chapter{Warm up}
 
 
+	\begin{asy}
+		size(5cm);
+		real c = 0.03;
+		pair P = (c, c); 
+		for (int i=0; i < 8; ++i)
+		 {for (int j=0; j< 5; ++j)
+		 draw((i,j)--(i+1,j)--(i+1,j+1)--(i, j+1)--cycle, royalblue+1);
+		 }
+	\end{asy}
+
+ 
 \input{../templates/PRD/ch.tex}
 
 To see the changes. 
