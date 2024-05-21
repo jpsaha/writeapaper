@@ -76,7 +76,7 @@
 
 
 %%fakesection Macros
-\input{../../../MathLatex/2020BibShort/short}
+% \input{../../../MathLatex/2020BibShort/short}
 \newcommand{\ii}{\item}
 \newcommand{\CC}{\mathbb C}
 %\newcommand{\FF}{\mathbb F}
@@ -87,7 +87,7 @@
 \newcommand{\ZZ}{\mathbb Z}
 \newcommand{\dang}{\measuredangle} %% Directed angle
 %
-\renewcommand{\wt}{\widetilde}
+% \renewcommand{\wt}{\widetilde}
 \newcommand{\inv}{^{-1}}
 \newcommand{\half}{\frac12}
 \newcommand{\defeq}{\coloneqq}
@@ -239,7 +239,7 @@
 %\cfoot{\pagemark}
 
 %%fakesection Bibliography
-\usepackage[backend=biber,backref=true,style=alphabetic]{biblatex}
+\usepackage[backend=bibtex,backref=true,style=alphabetic]{biblatex}
 \DeclareFieldFormat{labelalpha}{\textbf{\small #1}}
 \DefineBibliographyStrings{english}{%
 	backrefpage  = {cited p.}, % for single page number
@@ -254,4 +254,4 @@
 \renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
 \renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}
 \renewcommand{\finentrypunct}{}
-\addbibresource{../../../MathLatex/2020BibShort/biblio.bib}
+\addbibresource{../templates/PRD/draft.bib}
