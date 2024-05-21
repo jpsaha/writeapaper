@@ -1,0 +1,257 @@
+%%fakesection Page setup
+\areaset[0.375in]{4.5in}{8in}
+\setlength{\paperwidth}{6in} % set size for latex
+\setlength{\paperheight}{9in}
+\special{papersize=6in,9in} % set size for ghostscript
+\typearea[6mm]{1} % 6mm for spine
+
+%%fakesection Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb, mathrsfs}
+\usepackage{mathtools}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{asymptote}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage[capitalise]{cleveref}
+\usepackage{comment,longtable,subcaption, cancel, multicol}
+\makeindex
+%\renewcommand{\asydir}{asym}
+
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\scriptsize}
+\renewcommand{\epigraphwidth}{60ex}
+
+%\usepackage{von}
+%\renewcommand{\vonenvname}{example}
+
+%\begin{asydef}
+%	usepackage("amsmath");
+%	usepackage("amssymb");
+%	usepackage("amsthm");
+%	defaultpen(fontsize(10pt));
+%\end{asydef}
+
+\begin{asydef}
+	import olympiad;
+	import geometry;
+	import cse5;
+	pointpen = black;
+	pathpen = black;
+	pathfontpen = black;
+	anglepen = black;
+	anglefontpen = black;
+	pointfontsize = 9;
+	defaultpen(fontsize(9pt));
+	size(6cm); // set a reasonable default
+	usepackage("amsmath");
+	usepackage("amssymb");
+	usepackage("amsthm");
+	usepackage("mathrsfs");
+	usepackage("xcolor");
+	usepackage("skak");
+	usepackage("chessfss");
+	usepackage("fontawesome5");
+	pointfontsize=10;
+	defaultpen(fontsize(10pt));
+\end{asydef}
+
+%%fakesection enumitem
+\usepackage[shortlabels]{enumitem}
+% a list I like for walkthrough's --- Drew-style parts
+\newlist{walk}{enumerate}{3}
+\setlist[walk]{label=\bfseries (\alph*)}
+
+
+\newcommand{\Al}{\colorbox{green!25}{A}}
+
+
+\newcommand{\Co}{\colorbox{yellow!65}{C}}
+
+\newcommand{\Ge}{\colorbox{orange!40}{G}}
+
+\newcommand{\Nt}{\colorbox{blue!25}{N}}
+
+
+%%fakesection Macros
+\input{../../../MathLatex/2020BibShort/short}
+\newcommand{\ii}{\item}
+\newcommand{\CC}{\mathbb C}
+%\newcommand{\FF}{\mathbb F}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\dang}{\measuredangle} %% Directed angle
+%
+\renewcommand{\wt}{\widetilde}
+\newcommand{\inv}{^{-1}}
+\newcommand{\half}{\frac12}
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\dg}{^\circ}
+\newcommand{\ol}{\overline}
+\newcommand{\ts}{\textsuperscript}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\opname}{\operatorname}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\alert}[1]{\textbf{\color{blue} #1}}
+\newcommand{\vocab}[1]{\textbf{\color{green!40!black} #1}}
+\newcommand{\hrulebar}%
+{\par\hspace{\fill}\rule{0.75\linewidth}{.5pt}\hspace{\fill}
+\par\nointerlineskip \vspace{\baselineskip}}
+\DeclareMathOperator{\GL}{GL}
+%\DeclareMathOperator{\id}{id}
+\usepackage{listings}
+
+
+%%fakesection Fancy section and chapter heads
+\addtokomafont{partprefix}{\rmfamily}
+\renewcommand*{\partformat}{\color{purple}
+	\scalebox{2.5}{\thepart}\enlargethispage{2em}}
+\addtokomafont{chapterprefix}{\raggedleft}
+\RedeclareSectionCommand[beforeskip=0.5em]{chapter}
+\renewcommand*{\chapterformat}{\mbox{%
+	\scalebox{1.5}{\chapappifchapterprefix{\nobreakspace}}%
+	\scalebox{2.718}{\color{purple}\thechapter}\enskip}}
+\renewcommand*{\sectionformat}%
+	{\color{purple}\S\thesection\enskip}
+\renewcommand*{\subsectionformat}%
+	{\color{purple}\S\thesubsection\enskip}
+\renewcommand*{\subsubsectionformat}%
+	{\color{purple}\S\thesubsubsection\enskip}
+\KOMAoptions{numbers=noenddot}
+%\usepackage[tocindentauto]{tocstyle}
+%\usetocstyle{KOMAlike}
+
+
+%%fakesection Theorems
+%% Theorems
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem*{corollary*}{Corollary}
+
+% More Def-style theorems
+\theoremstyle{definition}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem*{claim*}{Claim}
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{definition*}{Definition}
+\newtheorem*{fact*}{Fact}
+
+\newtheorem{note}[theorem]{Note}
+%\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{note*}{Note}
+\newtheorem*{remark*}{{\color{green!35!blue} Remark}}
+
+\theoremstyle{remark}
+\newtheorem*{exercise}{Exercise}
+
+% PROBLEMS
+%\newtheorem{exampleA}{\color{blue}Example}[chapter]
+%\renewcommand{\theexampleA}{\thechapter\Alph{exampleA}}
+%\newtheorem{exampleB}{\color{blue}Example}[chapter]
+%\renewcommand{\theexampleB}{\thechapter\Alph{exampleB}}
+\newcommand{\walkthrough}{\par\noindent%
+	\textbf{\color{green!50!black}Walkthrough.}
+	\hspace{1ex}}
+\newcommand{\summary}{\par\noindent%
+	\textbf{\color{magenta!80!yellow}Summary.}
+	\hspace{1ex}}
+\theoremstyle{definition}
+
+\usepackage{thmtools}
+\usepackage{mdframed}
+\declaretheorem[name={\color{blue}Problem},style=definition]{problem}
+\numberwithin{problem}{chapter}
+\declaretheorem[name={\color{blue}Example},style=definition,sibling=problem]{example}
+\declaretheorem[name={\color{blue}RMO},style=definition,sibling=problem]{exampleRMO}
+%\newcommand*\map[3]{#1 \colon #2 \to #3}
+\newcommand*\ermo[1]{\begin{exampleRMO} #1 \end{exampleRMO}}
+
+\declaretheorem[name={\color{blue}INMO},style=definition,sibling=problem]{exampleINMO}
+\declaretheorem[name={\color{blue}Hint},style=definition,sibling=problem]{hint}
+\declaretheorem[name={\color{blue}Ex},style=definition,sibling=problem]{xca}
+\declaretheorem[name={\color{blue}Question},style=definition,sibling=problem]{question}
+
+\declaretheorem[name={\color{orange!35!black}Remark},style=definition]{remark}
+\numberwithin{remark}{chapter}
+
+%% Sol environments
+\newcounter{solnum}
+% soln
+\newenvironment{soln}{\stepcounter{solnum}\par\medskip\noindent
+{\bfseries\normalsize\color{red!65!black}Solution \thesolnum.}}%
+{\leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+\quad\hbox{\ensuremath{\blacksquare}}
+\par\medskip}
+% solution
+\newenvironment{solution}[1]{\stepcounter{solnum}\par\medskip\noindent
+{\bfseries\normalsize\color{red!60!black}Solution \thesolnum\ (#1).}}%
+{\hrulebar}
+\newcommand{\stepsol}{\stepcounter{solnum}}
+% presoln
+\newenvironment{presoln}{\par\medskip\noindent
+{\bfseries\normalsize\color{brown!80!red}First, let's work on it.}}%
+{\leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+\quad\hbox{\ensuremath{\clubsuit}}
+\par\medskip}
+
+
+%\declaretheorem[name=,style=definition]{solution}
+
+\mdfdefinestyle{bogusbox}{%
+	backgroundcolor=gray!20,
+	topline=false,
+	rightline=false,
+	leftline=false,
+	bottomline=false,
+	innertopmargin=0pt,
+	skipabove=12pt,
+	skipbelow=2pt,
+	nobreak=true,
+}
+\declaretheorem[mdframed={style=bogusbox},name=Bogus Solution,style=remark,numbered=no]{bogus}
+
+%%fakesection Headings
+\usepackage[headsepline]{scrlayer-scrpage}
+\automark[chapter]{chapter}
+\rohead{\footnotesize Typos may be reported to \texttt{jpsaha@iiserb.ac.in}.}
+\rehead{\footnotesize \url{https://jpsaha.github.io/MOTP/}}
+\lehead{\footnotesize \today}
+\lohead{\footnotesize \leftmark}
+\chead{}
+\rofoot{\thepage}
+\refoot{The material posted \href{https://web.evanchen.cc/}{here} and at \href{https://blog.evanchen.cc/}{this blog} by Evan Chen are quite useful.}
+\lefoot{\thepage}
+\lofoot{Some style files, prepared by \href{https://web.evanchen.cc/otis.html}{Evan Chen}, have been adapted here.}
+%\cfoot{\pagemark}
+
+%%fakesection Bibliography
+\usepackage[backend=biber,backref=true,style=alphabetic]{biblatex}
+\DeclareFieldFormat{labelalpha}{\textbf{\small #1}}
+\DefineBibliographyStrings{english}{%
+	backrefpage  = {cited p.}, % for single page number
+	backrefpages = {cited pp.} % for multiple page numbers
+}
+\DeclareFieldFormat{journaltitle}{\mkbibemph{#1},} % italic journal title with comma
+\DeclareFieldFormat[inbook,thesis]{title}{\mkbibemph{#1}\addperiod} % italic title with period
+\DeclareFieldFormat[article]{title}{#1} % title of journal article is printed as normal text
+\DeclareFieldFormat[article]{volume}{\textbf{#1}\addcolon\space}
+\renewcommand{\mkbibnamefirst}[1]{\textsc{#1}}
+\renewcommand{\mkbibnamelast}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}
+\renewcommand{\finentrypunct}{}
+\addbibresource{../../../MathLatex/2020BibShort/biblio.bib}
