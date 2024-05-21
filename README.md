@@ -1,5 +1,7 @@
 # writeapaper
 
+See [this page](https://davidegerosa.com/githubforlatex/). 
+
 This is a template repository to write scientific papers with latex and git. 
 
 A github action will compile the paper at every commit. The latest version is made available at this permanent URL
