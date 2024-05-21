@@ -27,7 +27,7 @@ jobs:
           run: |
               cd ${{ env.DIR }}
               pdflatex ${{ env.FILE }}
-              bibtex ${{ env.FILE }}
+              Biber ${{ env.FILE }}
               pdflatex ${{ env.FILE }}
               pdflatex ${{ env.FILE }}
       - name: move
