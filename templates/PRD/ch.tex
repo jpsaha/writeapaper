@@ -1,1 +1,39 @@
-jusst to add this file and see
+\begin{example}[\href{https://artofproblemsolving.com/community/c6h484358p2713710}{India BMath 2006}]
+\index{India BMath!2006}
+\label{India BMath 2006}
+A domino is a $2$ by $1$ rectangle. For what integers $m$ and $n$, can one cover an $m$ by $n$ rectangle with non-overlapping dominoes?
+\end{example}
+
+\walkthrough
+\begin{walk}
+		\ii If an $m\times n$ rectangle admits a covering by non-overlapping dominos, then show that at least one of the integers $m,n$ has to be even. 
+		\ii If at least one of $m,n$ is even, then prove that an $m\times n$ rectangle admits a covering by non-overlapping dominos.
+\end{walk}
+
+
+\begin{soln}
+In the following, an $m\times n$ rectangle is to be thought as an $m\times n$ rectangular grid. 
+
+To be able to cover an $m\times n$ rectangle by non-overlapping dominoes, it is necessary for the product $mn$ to be even, and hence, at least one of $m, n$ is even. 
+Indeed, if an $m\times n$ rectangle admits a covering using $k$ non-overlapping dominoes, then those dominoes together cover $2k$ unit squares, 
+and this yields that $2k = mn$. 
+
+Moreover, when at least one of $m, n$ is even, an $m\times n$ rectangle can be covered by non-overlapping dominoes by 
+covering each row by $m/2$ (resp. each column by $n/2$) non-overlapping dominos if $m$ (resp. $n$) is even. 
+
+This shows that an $m\times n$ rectangle can be covered by non-overlapping dominoes if and only if at least one of $m,n$ is even. 
+\end{soln}
+
+\begin{remark}
+The above conclusion shows that 
+an $m\times n$ rectangle admits a covering by non-overlapping dominoes if and only if 
+it admits a covering by non-overlapping dominoes in the \emph{most obvious manner}, i.e. a covering by non-overlapping dominoes such that all of them are either horizontal or vertical
+(cf. \cite[p. 6]{BrualdiIntroCombi}). 
+\end{remark}
+
+The following problem is a more general version of \cref{India BMath 2006}. 
+
+\begin{example}
+\cite[Problem 8, Chapter 2, p. 26]{EngelProblemSolvingStrategies}
+Show that an $m\times n$ rectangle admits a covering by non-overlapping $k\times 1$ rectangles if and only if $k$ divides $m$ or $k$ divides $n$. 
+\end{example}
